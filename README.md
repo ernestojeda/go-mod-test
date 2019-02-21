@@ -1,6 +1,6 @@
 # Go Mod Test
 
-![travis-badge](https://travis-ci.org/ernestojeda/go-mod-test.svg?branch=master)
+[![travis-badge](https://travis-ci.org/ernestojeda/go-mod-test.svg?branch=master)](https://travis-ci.org/ernestojeda/go-mod-test)
 
 Testing what happens with go.sum files between patch versions of Golang
 
