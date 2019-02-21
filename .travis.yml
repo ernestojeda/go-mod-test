@@ -1,0 +1,7 @@
+
+services:
+  - docker
+
+before_install:
+  - docker build -t test:1.11.2 -f Dockerfile.golang-1.11.2 .
+  - docker build -t test:1.11.5 -f Dockerfile.golang-1.11.5 .
