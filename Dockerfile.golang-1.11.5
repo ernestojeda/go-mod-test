@@ -2,13 +2,13 @@ FROM golang:1.11.5-alpine as builder
 
 RUN apk add --update --no-cache git build-base
 
-WORKDIR /go/src/github.com/ernestojeda/go-sample
+WORKDIR /go/src/github.com/ernestojeda/go-mod-test
 
 COPY . .
 
 RUN CGO_ENABLED=0 GO111MODULE=on go build ./...
 
 FROM scratch
-COPY --from=builder /go-sample /go-sample
+COPY --from=builder /go/src/github.com/ernestojeda/go-mod-test/go-mod-test /go-mod-test
 EXPOSE 8080
-ENTRYPOINT ["/go-sample"]
+ENTRYPOINT ["/go-mod-test"]
